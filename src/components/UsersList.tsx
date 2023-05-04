@@ -1,7 +1,7 @@
 import React from "react";
 import { getUsers } from '../services/userService'
 
-import { Container, Divider, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
+import { Button, Container, Divider, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 function UsersList() {
@@ -43,7 +43,7 @@ function UsersList() {
                                             <TableCell align="right">{country}</TableCell>
                                             <TableCell align="right">{email}</TableCell>
                                             <TableCell align="right">{phoneNumber}</TableCell>
-                                            <NavLink to={JSON.stringify(id)} className='nav-link mx-2'><TableCell align="right">Edit</TableCell></NavLink>
+                                            <NavLink to={JSON.stringify(id)} className='nav-link mx-2'><TableCell align="right"><Button variant="contained">Editar</Button></TableCell></NavLink>
                                         </TableRow>
                                     ))}
                                 </TableBody>
